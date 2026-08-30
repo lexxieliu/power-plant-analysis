@@ -1,7 +1,6 @@
 """
 01_eda_investigation.py
-This is the "how did you find that" step. Runs checks on the merged raw
-data and prints the evidence behind each fix in data_decisions.md.
+Runs checks on the merged raw data and prints the evidence behind each fix in data_decisions.md.
 No fixes applied here - just look and report. Fixes happen in
 02_prep_tableau_data.py.
 """
