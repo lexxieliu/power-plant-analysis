@@ -1,8 +1,5 @@
 """
-01_prep_tableau_data.py
-Reads the raw SCADA export and builds two clean CSVs for Tableau:
-  - hourly_summary.csv   (one row per hour)
-  - generation_long.csv  (one row per hour per boiler/HRSG)
+Reads the raw SCADA export and builds clean CSVs for Tableau
 
 See data_decisions.md for why each fix below is needed.
 """
