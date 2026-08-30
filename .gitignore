@@ -1,0 +1,7 @@
+# raw plant data is confidential, keep it local
+data/*.xlsx
+outputs/*.csv
+
+__pycache__/
+*.pyc
+.DS_Store
