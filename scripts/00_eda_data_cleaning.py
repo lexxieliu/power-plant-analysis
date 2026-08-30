@@ -2,22 +2,17 @@
 00_eda_data_cleaning.py
 Cleans the raw historian export and merges all tabs into one hourly table.
 
-The raw file has two kinds of tabs:
-  - "Plant Inputs (2)" and "weather (2)": already cleaned, one row per hour,
-    normal column headers.
   - "Internal Steam", "Asset Running", "Electrical": still raw. Each
     variable has its own timestamp column right before its value column
     (the historian exports one column pair per point). 3 header rows on
     top (Data Type / Description / Units), then data starts.
 
-Note: this file does not include a "Steam Output" tab (export flow meters,
-chiller condensate). If you have it, add a similar block for it below.
 """
 
 import pandas as pd
 from pathlib import Path
 
-SRC = Path("data/raw_scada_export.xlsx")
+SRC = Path("data/raw__export.xlsx")
 OUT = Path("outputs")
 OUT.mkdir(exist_ok=True)
 
