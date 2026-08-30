@@ -6,30 +6,13 @@
 > operating values. Only the analysis approach and code are meant to be
 > real.
 
-Analysis of hourly SCADA data from a central utility plant, covering fuel
+Analysis of hourly data from a utility plant, covering fuel
 inputs, boiler/turbine run states, steam metering, electrical metering,
 campus steam export, and weather over roughly X years (~X hourly rows).
 The result is a dashboard for non-technical plant stakeholders.
 
-![dashboard](docs/dashboard_screenshot.png)
+<img width="1192" height="745" alt="Screenshot 2026-08-30 at 8 55 24 AM" src="https://github.com/user-attachments/assets/653721a2-617b-475b-becb-bfe083d8fd4a" />
 
-## Repo layout
-
-```
-scripts/
-  00_eda_data_cleaning.py       raw tabs -> outputs/raw_combined.csv
-                                 (merges timestamp/value column pairs,
-                                 fixes sensor error codes, checks quality)
-  01_eda_investigation.py       the detective work: runs checks that
-                                 surface each problem, with evidence
-  02_prep_tableau_data.py       raw export -> hourly_summary.csv, generation_long.csv
-  03_build_dashboard_extracts.py  -> demand_weather_long.csv, power_mix_long.csv,
-                                      steam_destinations_long.csv (one per chart)
-data_decisions.md               every data-quality fix, and why
-docs/
-  presentation_script.md        spoken walkthrough for the dashboard
-  dashboard_screenshot.png      (numbers blurred - simulated data)
-```
 
 Run in order:
 ```bash
@@ -48,10 +31,6 @@ temperature). `02_prep_tableau_data.py` reads an already-merged export
 instead - point it at your own combined file, or swap in
 `outputs/raw_combined.csv` to run the whole pipeline from the raw file
 end to end.
-
-Note: the raw export used here doesn't include a "Steam Output" tab
-(export flow meters, chiller condensate) - those columns are missing from
-`raw_combined.csv`.
 
 ## Key findings (numbers are placeholders - see disclaimer above)
 
