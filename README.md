@@ -1,10 +1,13 @@
-# Power Plant Operational Analysis (Portfolio / Simulated Data)
+# Power Plant Operational Analysis (Simulated Data)
 
 > **Note:** This repo is a portfolio piece. The dataset, dashboard, and all
 > figures below are simulated / fake, not real facility data. Numbers in
 > the findings are placeholders (`X`, `X%`) and do not represent actual
 > operating values. Only the analysis approach and code are meant to be
 > real.
+
+<img width="1154" height="644" alt="Screenshot 2026-08-30 at 8 00 04 PM" src="https://github.com/user-attachments/assets/be7283f3-e161-47b6-bc45-c618b2f117c8" />
+
 
 Analysis of hourly data from a utility plant, covering fuel
 inputs, boiler/turbine run states, steam metering, electrical metering,
